@@ -1,0 +1,3 @@
+<h3>Enter a new <%= @band.name %> Joint</h3>
+
+<%= render "album_form", action: albums_url, method: "POST", album: @album, band: @band  %>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <div>
+        <img src="<%= image_path("dog-headphones.png") %>">
+        
+      </div>
+      
+      <% if current_user %>
+        <div>
+          <%= @current_user.email %>  
+        </div>
+          <form action="<%= session_url %>" method="delete">
+            <input type="submit" value="Log Out">
+          </form>
+      <% end %> 
+      
+    </nav>
+    <%= yield %>
+  </body>
+</html>
+
+

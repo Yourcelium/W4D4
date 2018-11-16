@@ -1,0 +1,22 @@
+<form action="<%= action %>", method="POST">
+    <input type="hidden", name="_method" value="<%= method %>">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    
+    <label >
+        Title
+        <input type="text" name="album[title]" value="<%= album.title %>">
+    </label>
+    <label >
+        Year
+        <input type="number" name="album[yr]" value="<%= album.yr %>">
+    </label>
+
+    <label >
+        <input type="checkbox" name="album[live]" value="true"> Live Recording<br>
+    </label>
+    <input type="hidden" name="album[band_id]" value="<%= band.id %>">
+    <input type="submit">
+    
+</form>
+
+

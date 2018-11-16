@@ -1,0 +1,13 @@
+<h3> 
+    <%= @album.title %>
+ </h3>
+
+ <ul>
+    <li class="album_band"> By: <%= @band.name  %> </li>
+    <li> <%= @album.yr %></li>
+    <% if @album.live %>
+        <li>Live Recording</li>
+    <% else %>
+        <li>Studio Album</li>
+    <% end %>
+ </ul>

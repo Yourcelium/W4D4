@@ -1,0 +1,11 @@
+<h3>
+    All Current Bands in Database
+</h3>
+<ul>
+    <% @bands.each do |band| %>
+        <li>
+            <%= band.name %>
+        </li>
+        
+    <% end %>
+</ul>

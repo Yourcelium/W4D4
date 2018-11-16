@@ -1,0 +1,24 @@
+<div class="form_header">
+  <h1><%= form_header %></h1>
+</div>
+
+<div class="user_form">
+  <form class="" action="<%= action %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+    <div class="form_input">
+      <label>
+          <div>Email</div>
+          <input type="text" name="user[email]" value="">
+
+      </label>
+    </div>
+    <div class="form_input">
+      <label> 
+        <div>Password</div>
+        <input type="password" name="user[password]" value="">
+      </label>
+    </div>
+    <input type="submit">
+  </form>
+</div>
